@@ -46,7 +46,10 @@
           <li><?php print check_plain($label);?></li>
         </ul>
       <?php endif; ?>
-    </div>
+      <?php if (!variable_get('jplayer_protect', FALSE) && variable_get('jplayer_encourage_download', FALSE)): ?>
+        <div class="jp-playlist-comment">To download content, right-click the file name (Ctrl-click on Mac)</div>
+      <?php endif; ?>
+      </div>
   </div>
 </div>
 <?php print drupal_render($dynamic);?>

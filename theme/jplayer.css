@@ -355,7 +355,8 @@ div.jp-playlist {
 	border:1px solid #009be3;
 	border-top:none;
 }
-div.jp-playlist ul {
+div.jp-playlist ul,
+div.jp-playlist div.jp-playlist-comment {
 	list-style-type:none;
 	margin:0;
 	padding:0 20px;

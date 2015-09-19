@@ -10,6 +10,12 @@
 function jplayer_settings_form($form, &$form_state) {
   $form = array();
 
+  $form['jplayer_encourage_download'] = array(
+    '#title' => t('Encourage direct downloads of audio files (ignored if jPlayer protection is enabled)'),
+    '#type' => 'checkbox',
+    '#default_value' => variable_get('jplayer_encourage_download', FALSE),
+  );
+
   $form['timeformat'] = array(
     '#type' => 'fieldset',
     '#title' => t('Time Format'),

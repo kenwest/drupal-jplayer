@@ -104,7 +104,8 @@ function theme_jplayer_item_list($variables) {
       if ($i == $num_items - 1) {
         $attributes['class'][] = 'last jp-playlist-last';
       }
-      $attributes['oncontextmenu'] = "return false;";
+      $context_menu = (!variable_get('jplayer_protect', FALSE) && variable_get('jplayer_encourage_download', FALSE)) ? 'true' : 'false';
+      $attributes['oncontextmenu'] = "return $context_menu;";
       $output .= '<li' . drupal_attributes($attributes) . '>' . $data . "</li>\n";
     }
     $output .= "</$type>";
