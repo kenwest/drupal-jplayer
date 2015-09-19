@@ -47,7 +47,7 @@
         </ul>
       <?php endif; ?>
       <?php if (!variable_get('jplayer_protect', FALSE) && variable_get('jplayer_encourage_download', FALSE)): ?>
-        <div class="jp-playlist-comment">To download content, right-click the file name (Ctrl-click on Mac)</div>
+        <div class="jp-playlist-comment">To download content, right-click the file name and &ldquo;Save as&rdquo; (Ctrl-click on Mac)</div>
       <?php endif; ?>
       </div>
   </div>
