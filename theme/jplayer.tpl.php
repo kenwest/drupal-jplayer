@@ -39,15 +39,15 @@
     </div>
     
     <div id="<?php print $player_id; ?>_playlist" class="jp-playlist">
+      <?php if (!variable_get('jplayer_protect', FALSE) && variable_get('jplayer_encourage_download', FALSE)): ?>
+        <div class="jp-playlist-comment">To download content, right-click the file name and &ldquo;Save&rdquo; or &ldquo;Open with app&rdquo; (Ctrl-click on Mac, Click-and-hold on mobile) &hellip;</div>
+      <?php endif; ?>
       <?php if ($mode == 'playlist' || $mode == 'single'): ?>
         <?php print $playlist; ?>
       <?php else: ?>
         <ul>
           <li><?php print check_plain($label);?></li>
         </ul>
-      <?php endif; ?>
-      <?php if (!variable_get('jplayer_protect', FALSE) && variable_get('jplayer_encourage_download', FALSE)): ?>
-        <div class="jp-playlist-comment">To download content, right-click the file name and &ldquo;Save as&rdquo; (Ctrl-click on Mac)</div>
       <?php endif; ?>
       </div>
   </div>
