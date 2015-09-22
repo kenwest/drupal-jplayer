@@ -84,6 +84,7 @@ function jplayer_library() {
     'website' => 'http://www.jplayer.org',
     'version' => $version,
     'js' => array(
+      drupal_get_path('module', 'jplayer') . '/theme/jquery.ui.touch-punch.min.js' => array(),
       $file => array(),
     ),
   );
